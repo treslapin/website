@@ -1,0 +1,73 @@
+<h2>Kitchen Panic</h2>
+
+<div class="center">
+	<iframe width="600" height="300" src="http://www.youtube.com/embed/-smQVmspVqM" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h4 class="center">Players complete recipes by catching required ingredients while avoiding harmful ones. </h4></p>
+
+<p class="play_now_link"><a href="/gamefiles/kp/KitchenPanic.html">Play this game now</a></p>
+<p class="center">(Shadows are not supported in Unity SWF files so the game will load without shadows and not as intended, sorry for the inconvenience)</p><br><br>
+
+<h3>Concept and Design</h3>
+
+
+<div class="info_2col">
+	<p>
+		<span class="field">Engine</span>
+		<span class="value">Unity</span>
+	</p>
+	<p>
+		<span class="field">Programming</span>
+		<span class="value">Unity Javascript</span>
+	</p>
+	<p>
+		<span class="field">Art</span>
+		<span class="value">Photoshop, 3DS Max, MS Paint</span>
+	</p>
+</div>
+
+<div class="info_2col">
+	<p>
+		<span class="field">Artist & Designer & Programmer</span>
+		<span class="value">Anna Lapinsh</span>
+	</p>
+</div>
+
+<div class="text_body">
+
+	<h4>About</h4>
+	<p>Kitchen Panic was made as a final year project for my degree. It was concepted and built in 3 months (March to May of 2012).
+	Having worked on all my other game projects in small teams I decided to challenge myself and work on this one alone. I wanted to create a game that could be used on a touch screen device so I limited myself to very basic user movements (swishes and taps). 
+	Sticking with a social theme, I wanted users to have a sense of pride in their completed levels. I added a picture of the completed recipe to the end of the game so users could see what sort of food they "created".</p>
+
+<h4>Concept</h4>
+	<p>The goal of the game is to complete a recipe by catching enough required ingredients. The ingredients fall from the top of the screen. The player controls a large disk with several holes, into which he must catch the ingredients. The ingredients that pass through the holes are considered caught by the player. 
+<br><br>The game will be made in Unity for the PC, though it can easily be adapted onto touch phones and tablets. 
+</p>
+	
+<h4>Gameplay</h4>
+<p><b>The Disk</b><br>
+	The player controls the disk by clicking and dragging his mouse from side to side. This rotates the disk, making it possible for the player to choose which ingredients he wants to catch. The disk is made out of several segments. If an ingredient hits a segment, it bounces off of it and falls off screen. At the beginning of the game, one of the disk's segments is cut out, allowing ingredients to pass through it. If a disk's segment is hit 5 times by an ingredient, that segment falls off, creating another hole for the ingredients to fall through.</p>	
+
+	<center><img src="/images/game_art/kp/thedisk.png" hspace="3" vspace="10" /> </center>	
+	
+<p><b>The Ingredients</b><br>
+	The ingredients fall from the top of the screen. They cast a shadow onto the spot they will eventually fall that gets bigger as they get closer to the disk. When they are off screen, a small information box will alert the player which items are going to fall next. 
+	<br><br>Each ingredient has a different attribute that is used at the end of the game to score the player. The attributes are words like Sour, Sweet, Bitter, Salty, Gross, Cute, etc. 
+	<br><br>There are three types of ingredients in the game:
+	<ul>
+	<li>Good ingredients are the ones that are required by the recipe. If they hit a segment of the disk, they damage it by 1. If a good ingredient is caught by the player, it takes up one slot in the recipe and has a positive effect on the player's score at the end. </li>
+	<li>Bad ingredients are ones not required in the recipe. If they hit a segment of the disk, they damage it by 1. If a bad ingredient is caught by the player, it takes up one slot in the recipe and has an adverse effect on the player's score at the end. </li>
+	<li>Power ups have two functions. If they hit the disk, the segment they hit is repaired by 1, and the power up bounces off screen. If they are caught by the player, a bad ingredient is replaced by a good one. If the player has caught no bad ingredients, the power up simply becomes a good ingredient.  </li>
+	</ul>
+	</p>	
+	<center><img src="/images/game_art/kp/sm_tomato.png" hspace="5" vspace="10" /><img src="/images/game_art/kp/sm_tomato.png" hspace="5" vspace="10" /><img src="/images/game_art/kp/sm_tomato.png" hspace="5" vspace="10" /><img src="/images/game_art/kp/sm_cockroach.png" hspace="5" vspace="10" /><img src="/images/game_art/kp/sm_tomato.png" hspace="5" vspace="10" /> </center>	
+	
+<p><b>The Recipes</b><br>
+	The recipe tells the player which items he needs to catch to get a good score. The player can select which recipe he wants to play from the start screen. Each recipe has a different amount of slots and different required ingredients. Some of the required ingredients are optional, and the player can choose what sort of ingredient attributes he wants to collect. Once the player has caught enough ingredients to fill all the slots, the game is over and the score is revealed.</p>	
+	
+<p><b>Game Over</b><br>
+	When the game ends, the player will get a score based on how well they did sticking to the recipe. The player also gets a score based on what the attributes were of the ingredients they caught as they were making the recipe.</p>	
+	
+</div>

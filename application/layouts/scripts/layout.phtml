@@ -1,0 +1,89 @@
+<?php
+
+$header_style = Zend_Controller_Front::getInstance()->getRequest()->getControllerName() == 'index' ? 'home' : 'interior';
+$controller = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
+
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lapinsh.com</title>
+		<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700,400' rel='stylesheet' type='text/css'>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script src="/js/site.js"></script>
+	</head>
+
+	<body class="<?php echo $header_style . ' ' . $controller; ?>">
+		<div class="frame">
+			<h1><a href="/">Anna Lapinsh</a></h1>
+
+			<?php if ($header_style == 'home') {?>
+				<p></p>
+			<?php } ?>
+
+			<ul class="navigation">
+				<li class="games"><a href="/games">Games</a>
+					<ul>
+						<li><a href="/games/kitchen-panic">Kitchen Panic</a></li>
+						<li><a href="/games/brush-rush">Brush Rush</a></li>
+						<li><a href="/games/space-constructor">Space Constructor</a></li>
+						<li><a href="/games/moustache">Moustache</a></li>
+						<li><a href="/games/pandamine">Pandamine</a></li>
+						<li><a href="/games/steam-express">Steam Express</a></li>
+						<li><a href="/games/medusa">Medusa</a></li>
+					</ul>
+				</li>
+				<li class="art"><a href="/art">Art</a>
+					<ul>
+						<li><a href="/art/cg">Computer Graphics</a></li>
+						<!--<li><a href="/art/pixel">MS Paint</a></li>-->
+						<li><a href="/art/sketches">Traditional</a></li>
+						<!--<li><a href="/art/3d">3DS Max</a></li>	-->					
+						<li><a href="/art/animation">Animation</a></li>						
+						
+					</ul>
+				</li>
+				<!--<li class="design"><a href="/design">Design</a>
+					<ul>
+						<li><a href="/design/websites">Websites</a></li>
+						<li><a href="/design/logos">Logos</a></li>
+						<li><a href="/design/flyers">Flyers</a></li>
+					</ul>
+				</li>-->	
+				<li class="cv"><a href="/cv/html">CV</a>
+					<ul>
+						<li><a href="/files/Anna_Lapinsh_CV.pdf">PDF</a></li>
+						<li><a href="/cv/html">HTML</a></li>
+					</ul>
+				</li>
+				<li class="contact"><a href="mailto:anna&#64;lapinsh.com">Contact</a>
+					<ul>
+						<li><a href="mailto:anna&#64;lapinsh.com">anna&#64;lapinsh.com</a></li>
+						<li><a href="/contact/about">About</a></li>
+					</ul>
+				</li>
+                				<li class="design"><a href="/"></a>
+					<ul>
+
+					</ul>
+				</li>
+			</ul>
+
+			<div id="content">
+			<?php
+			echo $this->layout()->content;
+			?>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="frame">
+				&copy; <?php echo date("Y"); ?> Anna Lapinsh
+				<span class="right"> </span>
+			</div>
+		</div>
+	</body>
+</html>
