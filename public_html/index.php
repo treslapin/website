@@ -6,7 +6,8 @@ defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
-    realpath(APPLICATION_PATH . '/../library/zf'),
+    realpath(APPLICATION_PATH . '/../../_lib/zf'),
+    realpath(APPLICATION_PATH . '/../library'),
     get_include_path(),
 )));
 

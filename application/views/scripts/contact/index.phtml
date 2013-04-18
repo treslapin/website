@@ -1,0 +1,33 @@
+<h3>Contact Me</h3>
+<form class="contact" method="post" action="/contact">
+    <?php
+    //echo $this->csrf;
+
+    if ($this->sent) {
+    ?>
+    <p>Your message has been sent.</p>
+    <p>I will get in touch as soon as I can.</p>
+    <hr />
+    <?php
+    } else {
+    ?>
+
+    <label>Name: <input type="text" name="name" /></label>
+    <label>Email: <input type="text" name="email" /></label>
+
+    <label>Message: <br /><textarea name="message"></textarea></label>
+
+    <p><input type="submit" value="Send" /></p>
+    <?php } ?>
+
+</form>
+
+<h3>Contact Details</h3>
+
+<p>E: <a href="mailto:<?php echo $this->email; ?>"><?php echo $this->email; ?></a></p>
+
+<p class="social">
+    <a class="linkedin" href="http://uk.linkedin.com/pub/anna-lapinsh/54/39b/75b" target="_blank"></a>
+    <a class="facebook" href="http://www.facebook.com/anna.lapinsh" target="_blank"></a>
+    <a class="twitter" href="https://twitter.com/treslapin" target="_blank"></a>
+</p>

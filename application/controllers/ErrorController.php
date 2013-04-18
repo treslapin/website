@@ -18,6 +18,7 @@ class ErrorController extends Zend_Controller_Action
             case Zend_Controller_Plugin_ErrorHandler::EXCEPTION_NO_ACTION:
                 // 404 error -- controller or action not found
                 $this->getResponse()->setHttpResponseCode(404);
+                $this->renderScript('error/404.phtml');
                 $priority = Zend_Log::NOTICE;
                 $this->view->message = 'Page not found';
                 break;
